@@ -1,0 +1,53 @@
+:root {
+    --main-color: hsl(211, 39%, 23%);
+  }
+  
+  body {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+  
+  body, .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container {
+    flex-wrap: wrap;
+  }
+  
+  .container.col {
+    flex-direction: column;
+  }
+  
+  h1, #counter-num {
+    text-align: center;
+  }
+  
+  #counter-num {
+    font-size: 90px;
+  }
+  
+  #counter-num, button {
+    font-weight: 700;
+    font-style: sans-serif;
+    color: var(--main-color);
+  }
+  
+  button {
+    outline: none;
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 20px 10px;
+    background: transparent;
+    user-select: none;
+    transition: all 0.3s linear;
+  }
+  
+  button:hover {
+    background: var(--main-color);
+    color: white;
+  }
