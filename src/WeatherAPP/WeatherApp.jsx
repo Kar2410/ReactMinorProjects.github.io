@@ -32,6 +32,8 @@ function WeatherApp() {
 
   async function DataUpdate() {
     const API_URL = `http://api.openweathermap.org/data/2.5/weather?q=${city_updated}&appid=1e56df2e7c1721befafb5e7ebda2efab&units=metric`;
+    //const API_URL = `https://kinesis.us-east-2.amazonaws.com/&appid=AKIA25ZYNVCIJTO7CXEJ`;
+
     const response = await fetch(API_URL);
     const resjson = await response.json();
     console.log(resjson);
