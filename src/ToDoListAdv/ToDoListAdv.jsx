@@ -28,7 +28,6 @@ function deleteItem(id){
 
 }
 
-
   return (
     <>
       <div class="page-content page-container" id="page-content">
