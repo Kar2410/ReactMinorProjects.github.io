@@ -37,7 +37,7 @@ function WeatherApp() {
 
     const response = await fetch(API_URL);
     const resjson = await response.json();
-    console.log(resjson);
+    console.log(response);
     setmaindata(resjson.main);
     setsysdata(resjson.sys);
     setweatherdata(resjson.weather[0]);
