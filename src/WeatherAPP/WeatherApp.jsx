@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./weatherApp.css";
 
 
-
 function WeatherApp() {
   const [city, setcity] = useState("");
   const [city_updated, setcity_updated] = useState("Tinsukia");
