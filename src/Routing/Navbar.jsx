@@ -5,7 +5,7 @@ import {NavLink} from "react-router-dom"
 function Navbar(){
     return(
         <>
-
+////
 
         <header>
         <h1 class="logo">Kartik</h1>
