@@ -20,6 +20,9 @@ function Login() {
                       <h3 class="title">
                         Sign in
                       </h3>
+
+
+                   {/* signIN */}
                       <form>
                         <div class="form-group input">
                           <label>
@@ -36,6 +39,10 @@ function Login() {
                         <button type="submit" class="button color-1 login" id="button-login">
                           Login
                         </button>
+
+
+
+                       {/* signUP */}
                       </form>
                       <a href="#" id="button-register-switch">
                         Create Account
@@ -87,6 +94,10 @@ function Login() {
                           Create
                         </button>
                       </form>
+
+
+
+
                       <a href="#" id="button-login-switch">
                         Already have an account?
                       </a>
