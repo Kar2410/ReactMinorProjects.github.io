@@ -1,64 +1,114 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import './style.css';
+import './script.js';
 
 
 
+function Login() {
 
-function Login(){
+  return (
+    <>
 
- 
-  const [name, setname] = useState("");
-  const [name_user, setname_user] = useState("Login");
-  const [pass, setpass] = useState("");
-
-  function username(data){
-      setname(data.target.value)
-  }
-
-  function password(pass_data){
-        setpass(pass_data.target.value)
-  }
-  function submission(event){
-      event.preventDefault();
-     
-      setname("")
-      setpass("")
-      if(name=="Kartik" && pass=="123"){     
-        setname_user("Welcome "+name)
-        alert("Loged in")
-      }
-      else{
-         setname_user("You Are Not Authorised..!!")
-      }
-   
-  }
-    return(
-        <>
-        <h3>username=Kartik</h3>
-        <h3>Password=123</h3>
-        <div className="log">
-        <h2> {name_user}</h2>
-        <form onSubmit={submission}>
-          <div className="input-cont">
-            <input type="text" value={name} onChange={username}/>
-            <label>Username</label>
-            <div className="border1"></div>
+      <div class="container">
+        <div class="wrapper">
+          <div id="auth" class="authentication">
+            <div class="wrapper">
+              <div id="login" class="card">
+                <div class="wrapper">
+                  <div class="animation form login">
+                    <div class="wrapper">
+                      <h3 class="title">
+                        Sign in
+                      </h3>
+                      <form>
+                        <div class="form-group input">
+                          <label>
+                            Email
+                          </label>
+                          <input type="email" name="email" id="user-email-login" class="user-email"/>
+                        </div>
+                        <div class="form-group input">
+                          <label>
+                            Password
+                          </label>
+                          <input type="password" name="password" id="user-password-login" class="user-password"/>
+                        </div>
+                        <button type="submit" class="button color-1 login" id="button-login">
+                          Login
+                        </button>
+                      </form>
+                      <a href="#" id="button-register-switch">
+                        Create Account
+                      </a>
+                    </div>
+                  </div>
+                  <div class="animation note login">
+                    <div class="wrapper">
+                      <h1>
+                        Hello There
+                      </h1>
+                      <p>
+                        Don't have an account?
+                      </p>
+                      <p>
+                        Sign up with us today!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="register" class="card">
+                <div class="wrapper">
+                  <div class="animation form register">
+                    <div class="wrapper">
+                      <h3 class="title">
+                        Create Account
+                      </h3>
+                      <form>
+                        <div class="form-group input">
+                          <label>
+                            Email
+                          </label>
+                          <input type="email" name="email" id="user-email-register" class="user-email"/>
+                        </div>
+                        <div class="form-group input">
+                          <label>
+                            Password
+                          </label>
+                          <input type="password" name="password" id="user-password-register" class="user-password"/>
+                        </div>
+                        <div class="form-group input">
+                          <label>
+                            Confirm Password
+                          </label>
+                          <input type="password" name="password" id="user-password-register-confirm" class="user-password-confirm"/>
+                        </div>
+                        <button type="submit" class="button color-1 login" id="button-register">
+                          Create
+                        </button>
+                      </form>
+                      <a href="#" id="button-login-switch">
+                        Already have an account?
+                      </a>
+                    </div>
+                  </div>
+                  <div class="animation note register">
+                    <div class="wrapper">
+                      <h1>
+                        Let's get you started
+                      </h1>
+                      <p>
+                        Be part of our awesome team and have fun with us
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="input-cont">
-            <input type="password" value={pass}  onChange={password}/>
-            <label>Password</label>
-            <div className="border2"></div>
-          </div>
-          <span className="check">
-            <input type="checkbox"/> <label>Remember Me</label>
-          </span>
-          <a href="#">Forgot Password</a>
-          <div className="clear"></div>
-          <input type="submit" value="Sign In"/>
-        </form>
+        </div>
       </div>
-   
-        </>
-    )
+    </>
+  )
 }
 export default Login;
